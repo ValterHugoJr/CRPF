@@ -1,0 +1,38 @@
+{
+  "name": "pref",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "Valter Hugo Jr",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "autoprefixer": "^10.0.1",
+    "formik": "^2.2.6",
+    "google-spreadsheet": "^3.1.15",
+    "hamburger-react": "^2.3.0",
+    "moment": "^2.29.1",
+    "next": "^10.0.1",
+    "next-ga": "^2.3.4",
+    "postcss-import": "^13.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-text-loop": "^2.3.0",
+    "swr": "^0.3.8",
+    "tailwindcss": "^1.9.6",
+    "yup": "^0.32.8"
+  }
+}
