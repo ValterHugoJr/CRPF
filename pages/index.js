@@ -13,14 +13,14 @@ const Index = () => {
     try {
       const response = await fetch("/api/getContact")
       const allData = await response.json()
-      const category = []
+      const categoria = []
       if (Object.keys(allData).length > 0) {
         allData?.map((item) => {
-          if (!category.includes(item.category)) {
-            category.push(item.category)
+          if (!categoria.includes(item.categoria)) {
+            categoria.push(item.categoria)
           }
         })
-        setDados({category, allData, filter: "" })
+        setDados({categoria, allData, filter: "" })
       }
       setLoading(false)
     } catch (error) {
@@ -33,16 +33,15 @@ const Index = () => {
 
   return (
     <>
-      <PageTitle title="CRPF - Prefeitura Municipal de Jequitinhonha"/>
+      <PageTitle title="Prefeitura Municipal de Jequitinhonha"/>
       <Header/>
-      {isLoading && (<p className="container text-center text-4xl font-bold">Aguarde...</p>)}
         {!isLoading &&(
-            <NavSections cat={dados.category} action={filterResults}/>)}
+            <NavSections cat={dados.categoria} action={filterResults}/>)}
         <div className="container mx-auto flex flex-wrap py-6">
            {!isLoading &&(
             <section className="w-full md:w-2/3 flex flex-col items-center px-3">
               {dados?.allData.map((item,index) => {
-                 if (!dados.filter || item.category.toLowerCase() === dados.filter.toLowerCase()) {
+                 if (!dados.filter || item.categoria === dados.filter) {
                     return <Contact key={index} data={item}/>
                  }
                   })}

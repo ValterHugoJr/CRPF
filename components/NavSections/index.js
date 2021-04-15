@@ -13,8 +13,7 @@ const NavSection = ({ cat, action }) => {
         <Hamburger toggled={isOpen} toggle={setOpen} />
       </div>
       <div
-        className={`${
-          isOpen ? "w-full container mx-auto flex flex-col" : "hidden sm:flex"
+        className={`${isOpen ? "w-full container mx-auto flex flex-col" : "hidden sm:flex"
         } sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2`}
       >
         {cat.map((item, index) => (

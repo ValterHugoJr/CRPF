@@ -1,5 +1,5 @@
 {
-  "name": "pref",
+  "name": "CRPF",
   "version": "2.0.0",
   "description": "",
   "main": "index.js",
@@ -15,10 +15,6 @@
   "keywords": [],
   "author": "Valter Hugo Jr",
   "license": "MIT",
-  "bugs": {
-    "url": ""
-  },
-  "homepage": "",
   "dependencies": {
     "autoprefixer": "^10.0.1",
     "formik": "^2.2.6",

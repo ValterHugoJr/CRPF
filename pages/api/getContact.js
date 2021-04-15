@@ -13,18 +13,19 @@ export default async (req, res) => {
     const sheet = doc.sheetsByIndex[0]
     const rows = await sheet.getRows()
     const contacts = rows
-      .filter((i) => i.Ativo.toLowerCase() === "true")
-      .map((i) => ({
+    .filter((i) => i.Ativo.toLowerCase() === "true")
+    .map((i) => (
+    {
         nome: i.Nome,
         datanascimento: i.DataNascimento,
         email: i.Email,
-        assessor: i.assessor,
-        whatsapp: i.Whatsapp,
-        categoria: i.Categoria,     
-        telefone: i.Telefone  
-      }))
+        isWhats: i.WhatsApp === "TRUE" ? true : false,
+        telefone: i.Telefone ,
+        categoria: i.Categoria        
+    }
+    ))
     res.json(contacts)
-  } catch (error) {
+  }catch(error){
     console.log(error)
     res.json({})
   }

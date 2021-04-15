@@ -1,5 +1,4 @@
 import React from "react"
-import Link from "next/link"
 
 const Footer = () => (
   <footer className="w-full border-t bg-blue pb-12">
